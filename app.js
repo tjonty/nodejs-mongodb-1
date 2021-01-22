@@ -14,6 +14,12 @@ mongoose.connect("mongodb://localhost:27012/userDataBase", function(){
 //,{useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
+const userDataSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  contactNumber: Int32Array,
+  gender: String,
+});
 
 app.get("/", function(req, res){
     res.send("Hello");
